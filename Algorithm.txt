@@ -1,0 +1,17 @@
+ Algorithm For Towers Of Henoi Problem
+// Computation of towers of  Hanoi problem using recurssive method
+//input:  Number of Disks inserted into the initial tower
+//output: Moves/steps required to move all disk from sorce to destination.
+Step1: Move the top n-1 disks from source B to auxillary tower A
+Step2: Move the nth dist from auxillary A to destination tower E.
+Step 3: Transffering the top n-1 disks from source can be solved in the same manner.
+step 4:   function
+            void TowerOfHenoi(int n,char B,char A,char E)
+  {
+        if(n>=1)
+          {
+             TowerOfHenoi(n-1,B,A,E);
+             printf("Move disk from %c to %c\n",B,E);
+             TowerOfHenoi(n-1,A,E,B);
+           }
+}
